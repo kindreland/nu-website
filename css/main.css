@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+    background-color: #ececec
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-img {
+    width: auto;
+    height: auto;
+}
