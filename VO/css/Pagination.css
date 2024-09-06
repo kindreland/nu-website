@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+/* Pagination Text
+---------------------------------------------------------------------- */
+
+.controls-pagination {
+    padding: 1rem;
+    text-align: left;
+    font-family: "Roboto-Regular", "Roboto", sans-serif;
+}
+
+.controls-pagination:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.mixitup-page-list,
+.mixitup-page-stats {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mixitup-page-list {
+    text-align: left;
+}
+
+.mixitup-page-stats {
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: "Roboto-Regular", "Roboto", sans-serif;
+    opacity: 0.7;
+    margin-right: 20px;
+}
+
+/* Pagination Controls 
+---------------------------------------------------------------------- */
+
+.mixitup-control {
+    position: relative;
+    padding: 2px;
+    display: inline-block;
+    text-align: center;
+    width: 3.2rem;
+    height: 3rem;
+    background: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: "Roboto-Regular", "Roboto", sans-serif;
+    transition: color 150ms, border-color 150ms;
+    vertical-align: middle;
+    border: 1px solid #d5d7e3;
+	margin-left: -5px;
+}
+
+.dark-mode .mixitup-control {
+	border: 1px solid #4c4c4c;
+  	background-color: #2d2d2d;
+	color: #ffffff;
+}
+
+/* Border on Left Arrow box */
+.mixitup-control:first-child {
+    border-radius: 3px 0 0 3px;
+}
+/* Border on Right Arrow box */
+.mixitup-control:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.mixitup-control:not(.mixitup-control-active):hover {
+    background-color: #ebecf2;
+}
+
+.dark-mode .mixitup-control:not(.mixitup-control-active):hover {
+  	background-color: #707070;
+}
+
+.mixitup-control-active {
+    cursor: default;
+	border: 1px solid #d5d7e3;
+  	background-color: #d8dae4;
+}
+
+.dark-mode .mixitup-control-active {
+    cursor: default;
+	border: 1px solid #4c4c4c;
+  	background-color: #474747;
+}
+
+.mixitup-control:disabled {
+    background: #eaeaea;
+    color: #aaa;
+    cursor: default;
+}
+
+.dark-mode .mixitup-control:disabled {
+    background: #585858;
+    color: #aaa;
+    cursor: default;
+}
+
+.mixitup-control-truncation-marker {
+    background: transparent;
+    pointer-events: none;
+    line-height: 2.2em;
+}
