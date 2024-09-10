@@ -86,6 +86,39 @@
 	border: 0;
 }
 
+
+#theme-switch{
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: #DDDDDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch svg{
+    fill: #373737;
+}
+
+#theme-switch svg:first-child{
+    display: none;
+}
+
+.dark-mode #theme-switch svg:last-child{
+    display: none;
+}
+
+.dark-mode #theme-switch svg:first-child{
+    display: block;
+}
+
+
+
+
+
 /*--------------------------------  SIDE-BAR CHECK BOX ITEMS */
 /*----------------------------------------------------------*/
 .sidebar-main-heading{
@@ -147,11 +180,11 @@
   background-color: #4d4d4d;
 }
 
-.row-background{
+.content-background{
     background-color: #F1EDEA;	
 }
 
-.dark-mode .row-background{
+.dark-mode .content-background{
     background-color: #2B2B2B;	
 }
 
@@ -173,7 +206,7 @@
     border-radius: 2px;
     border: 1px solid #dadce0;
     min-height: 170px;
-    width: 445px;
+    width: 450px;
     flex-basis: auto;
     background-color: #FFFFFF;
     margin-bottom: 15px;
@@ -240,7 +273,7 @@
     line-height: normal;
     letter-spacing: 0.5px;
     font-size: 12px;
-    margin-right: 2px;
+    margin-right: 4px;
     margin-bottom: 2px;
     height: 32px;
     margin-top: 4px;
@@ -259,9 +292,19 @@
 
 .dark-mode .actor-block-btn:hover {
   background-color: #4d4d4d;
-	
-
 }
+
+.footer-content{
+    font-family: "Roboto-Bold", "Roboto Bold", "Roboto", sans-serif;
+    background-color: #F1EDEA;	
+}
+
+
+.dark-mode .footer-content{
+    background-color: #2B2B2B;	
+}
+
+
 /*--------------------------------------  MODAL POP-UP ITEMS */
 /*----------------------------------------------------------*/
 .modal-block {
@@ -274,20 +317,4 @@
     font-weight: normal;
     font-size: medium;
 	
-}
-
-
-/*--------------------------------------  MIXit  */
-/*-----------------------------------------------*/
-
-html,
-body {
-    height: 100%;
-    background: #f2f2f2;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
 }

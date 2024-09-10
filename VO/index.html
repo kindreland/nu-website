@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>WellSaid Voice-over Choices</title>
+<title>Creative Services Voice-over Choices</title>
 
 <!-- Icons -->
 <link rel="shortcut icon" href="images/favicons/favicon.png">
@@ -20,6 +20,9 @@
 <!-- pagination CSS -->
 <link href="css/Pagination.css" rel="stylesheet" type="text/css">
 <!-- END Stylesheets -->
+    
+    <!-- JS page theme -->
+  <script type="text/javascript" src="scripts/theme-storage.js" defer></script>  
 </head>
 
 <body>
@@ -49,7 +52,19 @@
           <div class="smini-hidden mx-4">
             <ul class="list-inline">
               <li id="theme-Picker" class="list-inline-item"> Color Theme </li>
-              <li class="list-inline-item"> <a class="link-fx text-dual" data-toggle="layout" data-action="dark_mode_toggle" href="javascript:void(0)"  onClick="resetFilters()"> <i class="fa fa-moon"></i> </a> </li>
+              <li class="list-inline-item"> 
+                  <!--<a class="link-fx text-dual" data-toggle="layout" data-action="dark_mode_toggle" href="javascript:void(0)"  onClick="resetFilters()"> 
+                  <i class="fa fa-moon"></i> 
+                  </a> -->
+                  <button id="theme-switch" data-toggle="layout" data-action="dark_mode_toggle" onClick="resetFilters()">
+                      <!-- Light mode icon -->
+                      <svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" height="24px"  viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                      <!-- Dark mode icon -->
+                      <svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+ 
+                  
+                  </button>
+              </li>
             </ul>
           </div>
           <!-- END Visible only in normal mode --> 
@@ -217,8 +232,8 @@
   <!-- END Header --> 
   
   <!-- Main Container -->
-  <main id="main-container">
-    <div class="content row-background"> 
+  <main id="main-container" class="content-background">
+    <div class="content"> 
       
       <!-- Toggle Sidebar -->
       <button type="button" class="btn filter-btn mb-4" data-toggle="layout" data-action="sidebar_toggle"  onClick="resetFilters()"> <span><i class="fa fa-fw fa-sliders"></i>&nbsp;FILTERS</span> </button>
@@ -3652,7 +3667,7 @@
   <!-- END Main Container --> 
   
   <!-- Footer -->
-  <footer id="page-footer">
+  <footer id="page-footer" class="content-background footer-content">
     <div class="content py-3">
       <div class="row fs-sm">
         <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end"> <span class="fw-semibold">NU 2024</a> &copy;</span> </div>
@@ -3673,6 +3688,7 @@
 <script type="text/javascript" src="scripts/plugins/mixitup-filter/mixitup.js"></script> 
 <script type="text/javascript" src="scripts/plugins/mixitup-filter/mixitup-multifilter.min.js"></script> 
 <script type="text/javascript" src="scripts/plugins/mixitup-filter/mixitup-pagination.min.js"></script> 
+
 <script>
 	var containerEl = document.querySelector('#filter-section');
 	
