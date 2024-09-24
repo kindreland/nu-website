@@ -8,10 +8,12 @@ const themeSwitch = document.getElementById('theme-switch');
 
 function enableDarkmode (){
     localStorage.setItem('darkmode', 'active');
+    dark_mode_on();
 }
 
 function disableDarkmode(){
     localStorage.setItem('darkmode', null);
+    dark_mode_off();
 }
 
 

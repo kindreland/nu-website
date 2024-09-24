@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-
+/*------------------------------------------------  Header section */
+/*----------------------------------------------------------------*/
 .header-title-bar {
     padding-top: 8px;
     padding-right: 2px;
@@ -29,6 +30,28 @@
   background-color: #181818;
   background-image: url("../images/logos/CS_logo-dark.svg");
 }
+
+
+.header-links-right{
+    padding-top: 8px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: medium;
+    color: #000000;
+    text-indent: 310px;
+    font-family: Roboto;
+    font-size: 16px;
+    position: fixed;
+    line-height: 3rem;
+    min-height: 64px;
+    right: 10%;
+    
+}
+
 /*------------------------------------------------  SIDE BAR */
 /*----------------------------------------------------------*/
 .reset-all-btn{
@@ -127,10 +150,7 @@
     margin-left: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-	
 }
-
-
 
 .sidebar-heading{
     font-size: large;
@@ -142,7 +162,163 @@
     padding-left: 30px;
     font-family: "Roboto-Regular", "Roboto", sans-serif;
     font-size: 16px;
-	
+}
+
+.info-button, .info-button2, .info-button3, .info-button4{
+    font-size: 0.9rem;
+    margin-left: 8px;
+    color: #9B9B9B;  
+}
+
+.info-button:hover, .info-button2:hover, .info-button3:hover, .info-button4:hover{
+    color: #759AF0;
+    cursor: pointer;
+     position: relative;
+  display: inline-block;
+}
+
+/*tool tip Narration*/
+.info-button .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -50%;
+    margin-left: -70px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 11px;
+}
+
+.info-button .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/*tool tip Conversational*/
+.info-button2 .tooltiptext2 {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 11px;
+}
+
+.info-button2 .tooltiptext2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 66%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/*tool tip Promo*/
+.info-button3 .tooltiptext3 {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 11px;
+}
+
+.info-button3 .tooltiptext3::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 66%;
+    margin-left: -60px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/*tool tip Character*/
+.info-button4 .tooltiptext4 {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -50%;
+    margin-left: -71px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 11px;
+}
+
+.info-button4 .tooltiptext4::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 66%;
+    margin-left: -40px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+
+
+
+.info-button:hover .tooltiptext, .info-button2:hover .tooltiptext2, .info-button3:hover .tooltiptext3, .info-button4:hover .tooltiptext4 {
+  visibility: visible;
+  opacity: 1;
 }
 
 
