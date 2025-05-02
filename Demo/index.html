@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Creative Services Demos</title>
+
+<!-- Icons -->
+<link rel="shortcut icon" href="images/favicons/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicons/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+<!-- END Icons --> 
+
+<!-- Stylesheets --> 
+
+<!-- Codebase framework CSS -->
+<link rel="stylesheet" id="css-main" href="css/main-codebase.css">
+<!-- Custom CSS -->
+<link href="css/secondary.css" rel="stylesheet" type="text/css">
+<!-- pagination CSS -->
+<link href="css/Pagination.css" rel="stylesheet" type="text/css">
+<!-- END Stylesheets -->
+
+</head>
+
+<body>
+<!-- Page Container -->
+<div id="page-container" class="enable-page-overlay side-scroll page-header-modern"> 
+  
+  <!-- Sidebar -->
+  <nav id="sidebar"> 
+    <!-- Sidebar Content -->
+    <div class="sidebar-content"> 
+      <!-- Side Header -->
+      <div class="content-header justify-content-lg-end"> 
+        <!-- Reset/Close Buttons -->
+        <div>
+          <button type="button" class="sidebar-close-btn" data-toggle="layout" data-action="sidebar_toggle" onClick="resetFilters()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <!-- END Reset/Close Buttons --> 
+        
+      </div>
+      <!-- END Side Header --> 
+      
+      <!-- Sidebar Scrolling -->
+      <div class="js-sidebar-scroll"> 
+        <!-- Side User -->
+        <div class="content-side content-side-user"> 
+          <!-- Visible only in normal mode -->
+          <div class="smini-hidden mx-4">
+            <ul class="list-inline">
+              <li id="theme-Picker" class="list-inline-item"> Color Theme </li>
+              <li class="list-inline-item">
+                <button id="theme-switch" data-toggle="layout" data-action="dark_mode_toggle" onClick="resetFilters()"> 
+                <!-- Light mode icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" height="24px"  viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                  <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+                </svg>
+                <!-- Dark mode icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                  <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+                </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- END Visible only in normal mode --> 
+        </div>
+        <!-- END Side User --> 
+        
+        <!-- Side Navigation -->
+        <div class="content-side content-side-full">
+          <form>
+            <ul id="checkBox-Grp" class="nav-main">
+              <!-- Filter Title -->
+              <li class="nav-main-item">
+              <li class="sidebar-main-heading">Filters</li>
+              </li>
+              <!-- Reset Filter button-->
+              <button type="reset"  class="reset-all-btn"> <i class="fa-solid fa-rotate-right"></i>&nbsp;&nbsp;RESET FILTERS</button>
+              <!-- End Filter button--> 
+              
+              <!-- END Title--> 
+              
+              <!-- ****************************************************  Begin Check Marks *****************************************--> 
+              
+              <!-- Gender Section -->
+              <fieldset data-filter-group>
+                <li class="nav-main-item mt-4"> <span class="nav-main-link"> <i class="nav-main-link-icon fa-solid fa-photo-film"></i> <span class="nav-main-link-name sidebar-heading">Type</span> </span> 
+                  <!-- Check Boxes -->
+                  <div class="check-box-container">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label mr-12">Games</label>
+                      <input class="form-check-input" type="checkbox" value=".game">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">Graphics</label>
+                      <input class="form-check-input" type="checkbox" value=".graphics">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">Storyline</label>
+                      <input class="form-check-input" type="checkbox" value=".storyline">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">RISE</label>
+                      <input class="form-check-input" type="checkbox" value=".rise">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">Video</label>
+                      <input class="form-check-input" type="checkbox" value=".video">
+                    </div>
+                  </div>
+                  <!-- END Check Boxes --> 
+                </li>
+              </fieldset>
+              <!-- END Section --> 
+              
+              <!-- Performance Style Section -->
+              <fieldset data-filter-group>
+                <li class="nav-main-item mt-4"> <span class="nav-main-link"> <i class="nav-main-link-icon fa-solid fa-hourglass-start"></i> <span class="nav-main-link-name sidebar-heading">Time Estimates</span> </span> 
+                  <!-- Check Boxes -->
+                  <div class="check-box-container">
+                    <div class="form-check  form-check-inline">
+                      <label class="form-check-label  mr-21">1 day</label>
+                      <input class="form-check-input" type="checkbox" value=".1day">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">1-2 weeks</label>
+                      <input class="form-check-input" type="checkbox" value=".2weeks">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">2-3 days</label>
+                      <input class="form-check-input" type="checkbox" value=".3day">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">+2 weeks</label>
+                      <input class="form-check-input" type="checkbox" value=".moreWeeks">
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">4-5 days</label>
+                      <input class="form-check-input" type="checkbox" value=".4day">
+                    </div>
+                  </div>
+                  <!-- END Check Boxes --> 
+                </li>
+              </fieldset>
+              <!-- END Section --> 
+              
+              <!-- Regional Accents Section -->
+              <fieldset data-filter-group>
+                <li class="nav-main-item mt-4"> <span class="nav-main-link"> <i class="nav-main-link-icon fa-solid fa-universal-access"></i> <span class="nav-main-link-name sidebar-heading">ADA Compliance</span> </span> 
+                  <!-- Check Boxes -->
+                  <div class="check-box-container">
+                    <div class="form-check">
+                      <label class="form-check-label">Full ADA Compliance</label>
+                      <input class="form-check-input" type="checkbox" value=".fullADA">
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">Partial ADA Compliance</label>
+                      <input class="form-check-input" type="checkbox" value=".partADA">
+                    </div>
+                  </div>
+                  <!-- END Check Boxes --> 
+                </li>
+              </fieldset>
+              <!-- END Section -->
+              
+            </ul>
+          </form>
+        </div>
+        <!-- END Side Navigation --> 
+      </div>
+      <!-- END Sidebar Scrolling --> 
+    </div>
+    <!-- Sidebar Content --> 
+  </nav>
+  <!-- END Sidebar --> 
+  
+  <!-- Header -->
+  <header id="page-header"> 
+    <!-- Header Content -->
+    <div class="header-title-bar"></div>
+    <div class="content-header"> 
+      <!-- Left Section -->
+      <div class="space-x-1"> 
+        
+        <!-- Open Search Section --> 
+        <!--<button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-fw fa-search"></i>
+            </button>--> 
+        <!-- END Open Search Section --> 
+        
+      </div>
+      <!-- END Left Section --> 
+      
+    </div>
+    <!-- END Header Content --> 
+    
+    <!-- Header Search -->
+    <div id="page-header-search" class="overlay-header bg-body-extra-light">
+      <div class="content-header">
+        <form class="w-100" action="be_pages_generic_search.html" method="POST">
+          <div class="input-group"> 
+            <!-- Close Search Section --> 
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off"> <i class="fa fa-fw fa-times"></i> </button>
+            <!-- END Close Search Section -->
+            <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+            <button type="submit" class="btn btn-secondary"> <i class="fa fa-fw fa-search"></i> </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- END Header Search --> 
+    
+    <!-- Header Loader --> 
+    <!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+    <div id="page-header-loader" class="overlay-header bg-primary">
+      <div class="content-header">
+        <div class="w-100 text-center"> <i class="far fa-sun fa-spin text-white"></i> </div>
+      </div>
+    </div>
+    <!-- END Header Loader --> 
+  </header>
+  <!-- END Header --> 
+  
+  <!-- Main Container -->
+  <main id="main-container" class="content-background">
+    <div class="content">
+      <h1 class="page-title">Showcase</h1>
+      <p class="first-p">Explore our diverse portfolio showcasing the creative projects we've brought to life. From innovative interactives to dynamic videos.</p>
+      <p class="first-p"><em>Note: Time estimates are rough averages and can vary from project to project.</em></p>
+      <!-- Toggle Sidebar -->
+      <button type="button" class="btn filter-btn mb-4" data-toggle="layout" data-action="sidebar_toggle"  onClick="resetFilters()"> <span><i class="fa fa-fw fa-sliders"></i>&nbsp;FILTERS</span> </button>
+      <!-- END Toggle Sidebar --> 
+      <!-- ***** ===================================================================================================================================== ******--> 
+      <!-- 												--- ACTIVITY LIST ---															--> 
+      <!-- ***** ===================================================================================================================================== ******-->
+      <div id="paginated-list" class="row" aria-live="polite"> 
+        <!-- BEGIN Page Content -->
+        
+        <div id="filter-section" class="actor-blocks-containter"> 
+          
+          <!-- Activity Block -->
+          <div id="paginated-item" class="mix actor-block all"> <img class="actor-img" src="images/activity/roles.png" alt="actor image"/>
+            <div class="actor-block-title">
+              <h3>Roles</h3>
+            </div>
+            <p class="actor-block-subtitle">Storyline | Interactive</p>
+            <p class="actor-block-time"><i class="fa-regular fa-clock mr-8"></i>≈ 1 days</p>
+            <button type="button" class="btn actor-block-btn" data-bs-toggle="modal" data-bs-target="#modal-roles">VIEW PROJECT</button>
+          </div>
+          <!-- END Activity Block --> 
+          
+          <!-- Activity Block -->
+          <div id="paginated-item" class="mix actor-block all"> <img class="actor-img" src="images/activity/branching-example.png" alt="actor image"/>
+            <div class="actor-block-title">
+              <h3>Branching Example</h3>
+            </div>
+            <p class="actor-block-subtitle">Storyline | Interactive</p>
+            <p class="actor-block-time"><i class="fa-regular fa-clock mr-8"></i>≈ 1 days</p>
+            <button type="button" class="btn actor-block-btn" data-bs-toggle="modal" data-bs-target="#modal-branching-example">VIEW PROJECT</button>
+          </div>
+          <!-- END Activity Block --> 
+          
+          <!-- Activity Block -->
+          <div id="paginated-item" class="mix actor-block all"> <img class="actor-img" src="images/activity/historical-perspective.png" alt="actor image"/>
+            <div class="actor-block-title">
+              <h3>Historical Perspective of Orgs</h3>
+            </div>
+            <p class="actor-block-subtitle">Storyline | Interactive</p>
+            <p class="actor-block-time"><i class="fa-regular fa-clock mr-8"></i>≈ 1 days</p>
+            <button type="button" class="btn actor-block-btn" data-bs-toggle="modal" data-bs-target="#modal-branching-example">VIEW PROJECT</button>
+          </div>
+          <!-- END Activity Block --> 
+          
+          <!-- ***** ===================================================================================================================================== ******--> 
+          <!-- 												--- END ACTIVITY LIST --- 															--> 
+          <!-- ***** ===================================================================================================================================== ******--> 
+          <!-- END ROW--> 
+        </div>
+      </div>
+      <!--===============================================================================================================================================--> 
+      <!-- ***** ===================================================================================================================================== ******--> 
+      <!-- 												--- MODAL BEGIN --- 															--> 
+      <!-- ***** ===================================================================================================================================== ******--> 
+      
+      <!-- LightBox -->
+      <div class="modal fade" id="modal-roles" aria-labelledby="modal-popout" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-popout" role="document">
+          <div class="modal-content">
+            <div class="block block-rounded shadow-none mb-0">
+              <div class="block-header">
+                <h1 class="modal-title">Roles</h1>
+                <div class="block-options">
+                  <button id="video-close" type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close"> <i class="fa fa-times"></i> </button>
+                </div>
+              </div>
+              <p class="modal-subtitle">Storyline | Interactive</p>
+              <div class="modal-info-area">
+                <div class="modal-block-time">
+                  <li class="modal-block-title"><i class="fa-regular fa-clock modal-block-title-icon mr-8"></i> <strong>Rough Time Estimate</strong>
+                    <ul  class="modal-block-time-subitem">
+                      <li>≈ 1 days</li>
+                    </ul>
+                  </li>
+                </div>
+                <div class="modal-block-tools">
+                  <li class="modal-block-title"><i class="fa-solid fa-pen-ruler modal-block-title-icon mr-8"></i> <strong>Tools Used</strong>
+                    <ul class="modal-block-list-subitem">
+                      <li>Adobe Photoshop</li>
+                      <li>Midjourney</li>
+                      <li>Storyline</li>
+                    </ul>
+                </div>
+                <div class="modal-block-team">
+                  <li class="modal-block-title"><i class="fa-solid fa-user-group modal-block-title-icon mr-8"></i> <strong>Team</strong>
+                    <ul class="modal-block-list-subitem">
+                      <li>LXD: John Smith</li>
+                      <li>Content Author: Kelly Hu</li>
+                      <li>Creative Services: Daniel Hernandez</li>
+                    </ul>
+                </div>
+                <div class="modal-block-template mb-4"> 
+                    <i class="fa-solid fa-file-arrow-down modal-block-title-icon mr-8"></i><a class="template-link-text" href="#" target="_blank">TEMPLATE FILE</a> 
+                  </div>
+                  <div class="modal-block-ada">
+                      <li class="modal-block-title"><i class="fa-solid fa-file-lines modal-block-title-icon mr-8"></i> <strong>ADA Compliance Notes</strong>
+                          <ul class="modal-block-ada-subitem">
+                              <li class="modal-block-ada-text">The project adheres to ADA standards, offering accessible features to ensure usability for individuals with various disabilities.</li>
+                          </ul>
+                  </div>
+              </div>
+              <video id="video" class="bg-video" controls>
+                <source src="video/Aaron G/Aaron G Narration.mp4" type="video/mp4">
+                Your browser does not support the video tag. </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END LightBox --> 
+      
+      <!-- ***** ===================================================================================================================================== ******--> 
+      <!-- 												--- END MODALS --- 															--> 
+      <!-- ***** ===================================================================================================================================== ******--> 
+      
+      <!-- Pagination Buttons -->
+      <div class="controls-pagination">
+        <div class="mixitup-page-stats"></div>
+        <div class="mixitup-page-list"></div>
+      </div
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <!-- END Pagination --> 
+      <!-- END Page Content --> 
+      
+    </div>
+  </main>
+  <!-- END Main Container --> 
+  
+  <!-- Footer -->
+  <footer id="page-footer" class="content-background footer-content">
+    <div class="content py-3">
+      <div class="row fs-sm">
+        <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end"> <span class="fw-semibold">NU 2024</a> &copy;</span> </div>
+        <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start"> &nbsp; </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END Footer --> 
+</div>
+<!-- END Page Container --> 
+
+<!-- Codebase JS --> 
+<script src="scripts/codebase.app.min.js"></script> 
+<!-- JS page theme --> 
+<!--<script type="text/javascript" src="scripts/theme-storage.js" defer></script> --> 
+<!-- Pagination JS --> 
+<script type="text/javascript" src="scripts/lib/Pagination.js"></script> 
+<!-- MixitUp JS --> 
+<script type="text/javascript" src="scripts/lib/jquery.min.js"></script> 
+<script type="text/javascript" src="scripts/plugins/mixitup-filter/mixitup.js"></script> 
+<script type="text/javascript" src="scripts/plugins/mixitup-filter/mixitup-multifilter.min.js"></script> 
+<script type="text/javascript" src="scripts/plugins/mixitup-filter/mixitup-pagination.min.js"></script> 
+<script>
+	var containerEl = document.querySelector('#filter-section');
+	
+
+	//function call for filters
+    var mixer = mixitup(containerEl, {
+		load: {
+			filter: '.all'
+		},
+    	multifilter: {
+        	enable: true
+       	},
+        animation: {
+			duration: 350,
+            effects: 'fade',
+			nudge: true,
+			reverseOut: true
+        },
+		pagination: {
+        	limit: 12
+		}
+
+   	});
+	
+	function resetFilters(){
+	
+		if ($('input[type=checkbox]').is(":checked")) {
+      		return
+		}else {
+			//if no boxes checked *(filter & show value .all)
+			mixer.filter('.all');
+		}
+
+	};
+	
+
+	// any modal hidden stops video
+	$(".modal").on('hide.bs.modal', function(){
+		//get all videos on page
+		var videos = document.querySelectorAll('video');
+		// load videos to stop & start at beginning
+		Array.prototype.forEach.call(videos, function (video) {
+			if (video.tagName.toLowerCase() === 'video') {
+				video.load();
+			} 
+		});
+
+	});
+    
+			
+
+</script>
+</body>
+</html>

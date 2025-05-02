@@ -15203,7 +15203,7 @@ small, .small {
 @media (min-width: 992px) {
   #page-container.page-header-modern #page-header {
     background-color: #f0f2f5;
-    box-shadow: none !important;
+	  box-shadow: none !important;
   }
   #page-container.page-header-modern #page-header > .content-header {
     padding-top: 1.25rem;
@@ -15408,7 +15408,7 @@ small, .small {
 }
 .block {
   margin-bottom: 1.75rem;
-  background-color: #fff;
+  background-color: #000;
   box-shadow: 0 1px 2px rgba(220, 225, 232, 0.5), 0 1px 2px rgba(220, 225, 232, 0.5);
 }
 .block .block, .content-side .block {
